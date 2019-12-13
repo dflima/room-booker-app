@@ -1,10 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import { LoginWithGoogle } from "../services/oauth";
+import GoogleButton from "../components/GoogleButton";
 
 const Login = () => (
   <View style={styles.container}>
     <Text style={styles.title}>RoomBooker</Text>
-    <Button title="Login with Google" onPress />
+    <GoogleButton title="Login with Google" onPress={LoginWithGoogle} />
   </View>
 );
 
