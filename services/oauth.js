@@ -20,7 +20,6 @@ export const LoginWithGoogle = async () => {
       await AsyncStorage.setItem("@RoomBooker:calendarId", result.user.email);
       await AsyncStorage.setItem("@RoomBooker:name", result.user.name);
 
-      console.log(result);
       return result.accessToken;
     }
     return { cancelled: true };
